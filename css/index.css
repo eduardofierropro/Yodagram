@@ -1,56 +1,46 @@
 @charset "UTF-8";
 /*
+
+  Si quieres saber cada línea de este archivo te recomiendo que veas estos vídeos:
+  👉 Reset CSS: https://youtu.be/bXqPNoYFK8w
+  👉 Reset PRO en Código: https://www.youtube.com/watch?v=bXqPNoYFK8w    
+
     Estilos generales para que las etiquetas no contengan propiedades
     que nos estorben y en todos los navegadores se vean correctamente
 */
-* {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: baseline;
 }
 
-img {
-  display: block;
+img, picture, video, iframe, figure {
   max-width: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
-a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-decoration: none;
-  color: inherit;
-}
-
-video {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
 }
 
-audio {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
+a {
+  display: block;
 }
 
 p a {
@@ -61,19 +51,61 @@ li {
   list-style-type: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 table, tr, td {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
 }
 
 body {
   font: normal normal normal 100%/140% Fakt Pro Medium, "Roboto", sans-serif;
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   color: #181818;
@@ -81,60 +113,7 @@ body {
   /* font-smooth: always;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-form input, form textarea, form select {
-  font: normal normal normal 100%/140% Fakt Pro Medium, "Roboto", sans-serif;
-  -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  background-color: transparent;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  display: block;
-}
-
 @-webkit-keyframes aparecer {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes aparecer {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes aparecer {
   0% {
     opacity: 0;
   }
@@ -173,98 +152,64 @@ form input, form textarea, form select {
   padding: 0.7em 0;
   margin: 0 0 2em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .header .centrado {
   width: 94%;
   max-width: 960px;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .header__col {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .header__col--left {
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
 .index .header__col--center {
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 0 0 6.8em;
@@ -276,8 +221,6 @@ form input, form textarea, form select {
 }
 .index .header__col--right {
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-     -moz-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
@@ -293,9 +236,7 @@ form input, form textarea, form select {
   color: lightgrey;
   background: #fafafa;
   border: 1px solid lightgrey;
-  -webkit-border-radius: 0.2em;
-     -moz-border-radius: 0.2em;
-          border-radius: 0.2em;
+  border-radius: 0.2em;
   padding: 0.2em 2.7em;
   text-align: center;
   font-size: 0.9em;
@@ -304,30 +245,20 @@ form input, form textarea, form select {
 .index .header__ul {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .header__li {
   margin: 0 0.75em;
@@ -339,9 +270,7 @@ form input, form textarea, form select {
 .index .header__profile {
   width: 1.3em;
   height: 1.3em;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .index .contenido {
   width: 90%;
@@ -349,30 +278,20 @@ form input, form textarea, form select {
   min-height: 100vh;
   margin: auto;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .main {
   width: 65%;
@@ -385,9 +304,7 @@ form input, form textarea, form select {
 .index .stories {
   width: 100%;
   border: 1px solid lightgrey;
-  -webkit-border-radius: 0.2em;
-     -moz-border-radius: 0.2em;
-          border-radius: 0.2em;
+  border-radius: 0.2em;
   padding: 1em;
   overflow: hidden;
   position: relative;
@@ -399,10 +316,8 @@ form input, form textarea, form select {
   background: #f1f1f1;
 }
 .index .stories::-webkit-scrollbar-thumb {
-  background: -webkit-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
   background: linear-gradient(193deg, #cc155e 0%, #f08132 100%);
-  -webkit-border-radius: 0.4em;
-          border-radius: 0.4em;
+  border-radius: 0.4em;
 }
 .index .stories::-webkit-scrollbar-thumb:hover {
   background: lightgrey;
@@ -410,114 +325,72 @@ form input, form textarea, form select {
 .index .stories__slider {
   width: 200%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
   -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .index .stories__slide {
   width: 80px;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
   cursor: pointer;
 }
 .index .stories__mask {
   width: 64px;
   height: 64px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: #cc155e;
-  background: -webkit-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
-  background: -moz-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
-  background: -o-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
   background: linear-gradient(193deg, #cc155e 0%, #f08132 100%);
   overflow: hidden;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .stories__img {
   width: 60px;
   height: 60px;
   background: aquamarine;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   position: relative;
   -webkit-transform: scale(1);
-     -moz-transform: scale(1);
-      -ms-transform: scale(1);
-       -o-transform: scale(1);
           transform: scale(1);
   border: 3px solid white;
 }
@@ -530,40 +403,25 @@ form input, form textarea, form select {
   width: 1.5em;
   height: 1.5em;
   background: white;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: -webkit-calc(50% - 0.75em);
-  top: -moz-calc(50% - 0.75em);
   top: calc(50% - 0.75em);
   opacity: 0;
   pointer-events: none;
@@ -593,46 +451,30 @@ form input, form textarea, form select {
   padding: 0.1em 1em 0.1em 0.3em;
   border-bottom: 1px solid lightgrey;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .post .stories__slide {
   width: auto;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 .index .post .stories__mask {
   -webkit-transform: scale(0.75);
-     -moz-transform: scale(0.75);
-      -ms-transform: scale(0.75);
-       -o-transform: scale(0.75);
           transform: scale(0.75);
 }
 .index .post__image {
@@ -645,34 +487,22 @@ form input, form textarea, form select {
   position: absolute;
   bottom: 0.8em;
   left: 0.8em;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .post__fas {
   color: white;
@@ -681,30 +511,20 @@ form input, form textarea, form select {
 .index .post__buttons {
   padding: 1em 1em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .post__izq .post__svg {
   margin: 0 0.5em 0 0;
@@ -737,37 +557,25 @@ form input, form textarea, form select {
   padding: 1em;
   border-top: 1px solid lightgrey;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .post__text {
   font-size: 0.85em;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
   outline: none;
 }
@@ -787,76 +595,49 @@ form input, form textarea, form select {
 .index .aside__user {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .aside__mask {
   width: 70px;
   height: 70px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: #cc155e;
-  background: -webkit-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
-  background: -moz-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
-  background: -o-linear-gradient(257deg, #cc155e 0%, #f08132 100%);
   background: linear-gradient(193deg, #cc155e 0%, #f08132 100%);
   margin: 0 1em 0 0;
   overflow: hidden;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .aside__img-user {
   width: 65px;
   height: 65px;
-  -webkit-border-radius: 50%;
-     -moz-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3px solid white;
 }
 .index .aside__nick {
@@ -873,30 +654,20 @@ form input, form textarea, form select {
 .index .aside__top {
   margin: 0 0 1em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .aside__h4 {
   color: #8e8e8e;
@@ -910,30 +681,20 @@ form input, form textarea, form select {
 .index .aside__li {
   margin: 0 0 1em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .aside__col {
   line-height: 1em;
@@ -966,30 +727,20 @@ form input, form textarea, form select {
   font-size: 0.7em;
   color: #c7c7c7;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-     -moz-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .index .aside__foot li {
   margin: 0;
@@ -1020,64 +771,42 @@ form input, form textarea, form select {
 }
 .login .main {
   width: 100%;
-  min-height: -webkit-calc(100vh - 80px);
-  min-height: -moz-calc(100vh - 80px);
   min-height: calc(100vh - 80px);
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__container {
   width: 100%;
   max-width: 780px;
   min-height: 50vh;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__container > div {
   min-height: 50vh;
@@ -1085,9 +814,6 @@ form input, form textarea, form select {
 }
 .login .main__imgs {
   -webkit-transform: scale(1.1);
-     -moz-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-       -o-transform: scale(1.1);
           transform: scale(1.1);
 }
 .login .main__animation {
@@ -1101,67 +827,45 @@ form input, form textarea, form select {
   right: 13.6%;
   top: 15.8%;
   -webkit-animation: aparecer 6s ease infinite both;
-     -moz-animation: aparecer 6s ease infinite both;
-       -o-animation: aparecer 6s ease infinite both;
           animation: aparecer 6s ease infinite both;
 }
 .login .main__slide.slide1 {
   -webkit-animation-delay: 0s;
-     -moz-animation-delay: 0s;
-       -o-animation-delay: 0s;
           animation-delay: 0s;
 }
 .login .main__slide.slide2 {
   -webkit-animation-delay: 4s;
-     -moz-animation-delay: 4s;
-       -o-animation-delay: 4s;
           animation-delay: 4s;
 }
 .login .main__slide.slide3 {
   -webkit-animation-delay: 8s;
-     -moz-animation-delay: 8s;
-       -o-animation-delay: 8s;
           animation-delay: 8s;
 }
 .login .main__slide.slide4 {
   -webkit-animation-delay: 13s;
-     -moz-animation-delay: 13s;
-       -o-animation-delay: 13s;
           animation-delay: 13s;
 }
 .login .main__slide.slide5 {
   -webkit-animation-delay: 10s;
-     -moz-animation-delay: 10s;
-       -o-animation-delay: 10s;
           animation-delay: 10s;
 }
 .login .main__form {
   width: 50%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__sup {
   width: 100%;
@@ -1169,30 +873,20 @@ form input, form textarea, form select {
   background: white;
   padding: 1em 3em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__h1 {
   max-width: 180px;
@@ -1222,30 +916,20 @@ form input, form textarea, form select {
 .login .main__formulario {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__input {
   width: 100%;
@@ -1253,9 +937,7 @@ form input, form textarea, form select {
   border: 1px solid #dbdbdb;
   padding: 0.8em 1em;
   margin: 0.3em;
-  -webkit-border-radius: 0.2em;
-     -moz-border-radius: 0.2em;
-          border-radius: 0.2em;
+  border-radius: 0.2em;
   font-size: 0.75em;
 }
 .login .main__input--submit {
@@ -1288,30 +970,20 @@ form input, form textarea, form select {
 .login .main__separador {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
   margin: 1em 0;
   color: #8e8e8e;
 }
@@ -1335,30 +1007,20 @@ form input, form textarea, form select {
   width: 100%;
   padding: 1em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: column nowrap;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
-     -moz-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .main__span {
   font-size: 0.9em;
@@ -1366,35 +1028,23 @@ form input, form textarea, form select {
 .login .main__ul {
   width: 85%;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row nowrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
   margin: 0.5em 0 0;
 }
 .login .main__li {
-  width: -webkit-calc(100% / 2 - 0.2em);
-  width: -moz-calc(100% / 2 - 0.2em);
   width: calc(100% / 2 - 0.2em);
 }
 .login .footer {
@@ -1407,57 +1057,37 @@ form input, form textarea, form select {
   font-weight: 500;
   font-size: 0.8em;
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .footer__ul {
   display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-content: auto;
-      -ms-flex-line-pack: auto;
-          align-content: auto;
+  -ms-flex-line-pack: auto;
+      align-content: auto;
 }
 .login .footer__li {
   margin: 0 1em 0 0;

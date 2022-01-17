@@ -9,10 +9,11 @@ Este ejemplo ha sido programado en 3 horas mientras charlábamos y comentábamos
 ## Uso 🚀
 ¡Mira el código, modifícalo y disfruta!
 
+## URL para ver el resultado
+Para ver proyecto en directo puedes verlo aquí [https://eduardofierropro.github.io/Yodagram/](https://eduardofierropro.github.io/Yodagram/)
 
 ## Vídeos relacionados en Youtube 🛠️
 * [https://www.youtube.com/watch?v=JWV2rgTnbFQ](https://www.youtube.com/watch?v=JWV2rgTnbFQ)
-
 
 ## Autor ✒️
 **Eduardo Fierro** - *Documentación y trabajo inicial*
